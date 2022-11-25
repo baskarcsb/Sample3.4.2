@@ -16,7 +16,7 @@ public class LoginHelper extends ScenarioSteps {
 	
 	
 	public void openLoginPage() throws Exception {
-		loginPage.open();
+		loginPage.openPage();
 	}
 	
 }
