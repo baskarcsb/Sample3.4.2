@@ -31,9 +31,9 @@
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -73,9 +73,9 @@
 <!-- JQuery-UI -->
 <link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
 <script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -107,18 +107,23 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
 
 
-        $('.scenario-result-table').DataTable({
-
-            "order": [[0, "asc",], [3, "asc",]],
-            "pageLength": 25,
-            "language": {
-                searchPlaceholder: "Filter",
-                search: ""
-            },
-            columnDefs: [
-                {type: 'time-elapsed-dhms', targets: 4}
-            ]
-        });
+            $("#scenario-results").DataTable({
+                "order": [[0, "asc",], [3, "asc",]],
+                "language": {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                },
+                columnDefs: [
+                    {type: 'time-elapsed-dhms', targets: 4}
+                ]
+            })
+            $("#manual-scenario-results").DataTable({
+                "order": [[0, "asc",], [1, "asc",]],
+                "language": {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                },
+            })
 
         // Results table
         $('#test-results-table').DataTable({
@@ -147,10 +152,13 @@
 
 <div class="middlecontent">
 
+
     <div id="contenttop">
         <div class="middlebg">
         <span class="breadcrumbs"><a href="index.html">Home</a>
                 > Feature 
+                > <span
+                    class="truncate-60">Launchapplication/Launch Selenium Framework Web Application &gt; Duration 10 Minutes Or Over</span>
         </span>
         </div>
         <div class="rightbg"></div>
@@ -173,7 +181,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 25-11-2022 08:12:18</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 07-03-2023 13:13:12</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -182,17 +190,17 @@
         <div class="middlb">
             <div class="table">
 
-                <h2>Test Results: All Tests</h2>
+                <h2><i class='bi bi-tags'></i> Feature: Launchapplication/Launch Selenium Framework Web Application > Duration 10 Minutes Or Over</h2>
                 <table class='overview'>
                     <tr>
                         <td width="375px" valign="top">
                             <div class="test-count-summary">
                                 <div>
 
-                                    1 test in 1 scenario
+                                    1 test
 
                                      |
-                                        <a href="04f2cba32622ec5a4fd73220cb10c4ceec88cbda80db5d7e42c487dbe668294e.csv" title="Download CSV"> <i class="bi bi-cloud-arrow-down" title="Download CSV"></i></a>
+                                        <a href="2752073450627ec901444e99b1f0b2b6d2552d76d76aa6f1b01ee5a94b52f65c.csv" title="Download CSV"> <i class="bi bi-cloud-arrow-down" title="Download CSV"></i></a>
 
                                     <p class="report-info"><i class="bi bi-info-circle"></i> Note that results include
                                         data-driven scenarios containing test ,
@@ -241,43 +249,43 @@
                                                                         <td>
                                                                             <i class="bi bi-flag-fill"></i> Tests Started
                                                                         </td>
-                                                                        <td>Nov 25, 2022 08:12:00</td>
+                                                                        <td>Mar 07, 2023 13:02:50</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stop-circle"></i> Tests Finished
                                                                         </td>
-                                                                        <td>Nov 25, 2022 08:12:15</td>
+                                                                        <td>Mar 07, 2023 13:13:07</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Total Duration
                                                                         </td>
-                                                                        <td>14s</td>
+                                                                        <td> 10m 17s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-trophy"></i> Fastest Test
                                                                         </td>
-                                                                        <td>14s</td>
+                                                                        <td> 10m 17s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-skip-start"></i> Slowest Test
                                                                         </td>
-                                                                        <td>14s</td>
+                                                                        <td> 10m 17s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Average Execution Time
                                                                         </td>
-                                                                        <td>14s</td>
+                                                                        <td> 10m 17s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch-fill"></i> Total Execution Time
                                                                         </td>
-                                                                        <td>14s</td>
+                                                                        <td> 10m 17s</td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -313,6 +321,23 @@
                                                             </div>
                                                         </div>
                                                 </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <h3>Tags</h3>
+
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <div>
+                                                                                <a href="c721517496ffad35fe9a5d73f07a9bd15eb22da3cff8328e1d9f7ec70655c6b0.html">
+                                                                                    <span class="badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                                                                        <i class="bi bi-tag"></i> Login&nbsp;&nbsp;&nbsp;1
+                                                                                    </span>
+                                                                                </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
                                             </div>
 
                                             <div class="container-fluid">
@@ -337,7 +362,7 @@
                                                                         <tbody>
                                                                                 <tr>
                                                                                     <td>
-                                                                                            <a href="7340372ade9e992b546bdad4be8cf6f2b2d5ff2a581167d17ccc18c60e3f95b2.html" > Search by keyword</a>
+                                                                                            <a href="793c36c7eba42e05e457d04f8dfa38cb51e4017a34a88c97012582b0935db3d4.html" > Launch selenium framework web application</a>
                                                                                     </td>
                                                                                     <td>1</td>
                                                                                     <td>1</td>
@@ -365,6 +390,22 @@
 
                                             </div>
                                             <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Tags</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                    <a href="c721517496ffad35fe9a5d73f07a9bd15eb22da3cff8328e1d9f7ec70655c6b0.html">
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Login&nbsp;&nbsp;&nbsp;1
+                                    </span>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
                                             </div>
                                         </div>
                                         <div id="tests" class="tab-pane fade in">
@@ -387,12 +428,12 @@
                                                 <tbody>
                                                         <tr class="scenario-result SUCCESS">
                                                             <td>
-                                                                    <a href="7340372ade9e992b546bdad4be8cf6f2b2d5ff2a581167d17ccc18c60e3f95b2.html">Search by keyword</a>
+                                                                    <a href="793c36c7eba42e05e457d04f8dfa38cb51e4017a34a88c97012582b0935db3d4.html">Launch selenium framework web application</a>
                                                             </td>
-                                                            <td><a href="35cfed838fce6a34547d061ef095dd6837e5024c11ea9a63e7b6112cef6d263f.html">Searching for a term</a></td>
-                                                            <td>3</td>
-                                                            <td>08:12:00</td>
-                                                            <td>14s 846ms</td>
+                                                            <td><a href="accd79c3bef0ed0ed18648262334bca3e9caaabc4b9ff7f4fa6c7fcd517106ac.html">Launch web application</a></td>
+                                                            <td>1</td>
+                                                            <td>13:02:50</td>
+                                                            <td>10m 17s</td>
                                                             <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
                                                             </td>
                                                         </tr>
@@ -428,7 +469,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <span class="version">Serenity BDD version 3.4.2</span>
+            <span class="version">Serenity BDD version 3.5.1</span>
         </div>
     </div>
 </div>
@@ -442,14 +483,14 @@
 
         // Options define for display value on top of bars
         const outcomeDetailsReports = [
-            { title: 'Passing Test Cases', link: "99bebd63aea496d9808fe3f58ad6b70cf9a5c2e2561f85e336828d999e143881.html" },
-            { title: 'Pending Test Cases', link: "3360f1d5745bce94cf4206ae89e3e173fa09aaba8e2335ef4131a6e24383280d.html" },
-            { title: 'Ignored Test Cases', link: "5872fa53634963b4249f6538a60c829040484077bed44aef8ede703a8027ac8b.html" },
-            { title: 'Skipped Test Cases', link: "4206910c2e0bc40ee5299d734196f2470ca42390d2f38a87ce2ea5c00882777e.html" },
-            { title: 'Aborted Test Cases',  link: "1b701981c22cc715500f68f40559d34154f9c64fbd52967cb4dc7c695eb68a0e.html"},
-            { title: 'Failed Test Cases', link: "3542a7a0f0f214252618d8aaef40883a0d4a5e3af10cdd137f792840e7d0b208.html"  },
-            { title: 'Broken Test Cases', link: "5fb9d23045b34ee73aa15911194ea63fe30d68a7af90f36aa6c3a248d68b0a0f.html"    },
-            { title: 'Compromised Test Cases',  link: "6363763f90dd68f3dd2f645597ad8ffa08bdca2de1b0218977accb55b07e11fe.html" },
+            { title: 'Passing Test Cases', link: "5cccd020bc35fc25299654991954c27930b77f2c745174f03739b7aa2f58442f.html" },
+            { title: 'Pending Test Cases', link: "c814d01baaccdd3797c122548b3157f20de09be879603ca8ce1c797bbb4568e4.html" },
+            { title: 'Ignored Test Cases', link: "61780b83c9a5ce8a6d9f634920a7f1cd9676885b4f6e6b579c0292c78ef1ed9a.html" },
+            { title: 'Skipped Test Cases', link: "3732274fcf579685681a6f17379984b9f893bab68ce0b43fadacbc3405b3bf32.html" },
+            { title: 'Aborted Test Cases',  link: "fadcb80728b0dabe47f7cab02a6e1547431f2abe446f350b2895605b3786c3e7.html"},
+            { title: 'Failed Test Cases', link: "2348926a1b522eadccc61f8b4268b0cae2b545c377cfb741fae8ecccc6cc4236.html"  },
+            { title: 'Broken Test Cases', link: "70af37d877719bfcc2e5c7ce8a36fa21bf110dde72b97623cc683b1cf93fb2bc.html"    },
+            { title: 'Compromised Test Cases',  link: "b132017add48e0f3b085df286e1291ef9564c65c56381b5c58bd0242a778708f.html" },
         ]
         const outcomeData = {
             labels: ['Passing Test Cases', 'Pending Test Cases', 'Ignored Test Cases', 'Skipped Test Cases', 'Aborted Test Cases', 'Failed Test Cases', 'Broken Test Cases', 'Compromised Test Cases','Undefined Test Cases'],
@@ -538,14 +579,14 @@
         // Options define for display value on top of bars
 
         const severityDetailsReports = [
-            { title: 'Passing Scenarios', link: "99bebd63aea496d9808fe3f58ad6b70cf9a5c2e2561f85e336828d999e143881.html" },
-            { title: 'Pending Scenarios', link: "3360f1d5745bce94cf4206ae89e3e173fa09aaba8e2335ef4131a6e24383280d.html" },
-            { title: 'Ignored Scenarios', link: "5872fa53634963b4249f6538a60c829040484077bed44aef8ede703a8027ac8b.html" },
-            { title: 'Skipped Scenarios', link: "4206910c2e0bc40ee5299d734196f2470ca42390d2f38a87ce2ea5c00882777e.html" },
-            { title: 'Aborted Scenarios',  link: "1b701981c22cc715500f68f40559d34154f9c64fbd52967cb4dc7c695eb68a0e.html"},
-            { title: 'Failed Scenarios', link: "3542a7a0f0f214252618d8aaef40883a0d4a5e3af10cdd137f792840e7d0b208.html"  },
-            { title: 'Broken Scenarios', link: "5fb9d23045b34ee73aa15911194ea63fe30d68a7af90f36aa6c3a248d68b0a0f.html"    },
-            { title: 'Compromised Scenarios',  link: "6363763f90dd68f3dd2f645597ad8ffa08bdca2de1b0218977accb55b07e11fe.html" },
+            { title: 'Passing Scenarios', link: "5cccd020bc35fc25299654991954c27930b77f2c745174f03739b7aa2f58442f.html" },
+            { title: 'Pending Scenarios', link: "c814d01baaccdd3797c122548b3157f20de09be879603ca8ce1c797bbb4568e4.html" },
+            { title: 'Ignored Scenarios', link: "61780b83c9a5ce8a6d9f634920a7f1cd9676885b4f6e6b579c0292c78ef1ed9a.html" },
+            { title: 'Skipped Scenarios', link: "3732274fcf579685681a6f17379984b9f893bab68ce0b43fadacbc3405b3bf32.html" },
+            { title: 'Aborted Scenarios',  link: "fadcb80728b0dabe47f7cab02a6e1547431f2abe446f350b2895605b3786c3e7.html"},
+            { title: 'Failed Scenarios', link: "2348926a1b522eadccc61f8b4268b0cae2b545c377cfb741fae8ecccc6cc4236.html"  },
+            { title: 'Broken Scenarios', link: "70af37d877719bfcc2e5c7ce8a36fa21bf110dde72b97623cc683b1cf93fb2bc.html"    },
+            { title: 'Compromised Scenarios',  link: "b132017add48e0f3b085df286e1291ef9564c65c56381b5c58bd0242a778708f.html" },
         ]
         const severityData = {
             labels: ['Passing', 'Pending', 'Ignored', 'Skipped', 'Aborted', 'Failed', 'Broken', 'Compromised'],
@@ -616,14 +657,14 @@
 
         // Options define for display value on top of bars
         const durationDetailsReports = [
-                {title: "Under 1 second", link: "e134444bfa25bba92378dd21665b0cff9b37ed98539875f2fa0054bf73298b4a.html"},
-                {title: "1 to 10 seconds", link: "500d523e6c00e1eb1ff390ec3852d0a3acbe31fc6fa4f47162e941035ca50698.html"},
-                {title: "10 to 30 seconds", link: "9cbe7de9b1b0b1528523642290457f90a310cbaeb5c1e8ff41121cc979a39b2b.html"},
-                {title: "30 to 60 seconds", link: "e48d9e0a86d66122adc23421a54bc11e391e3618808d21c1647474f8f82cb44e.html"},
-                {title: "1 to 2 minutes", link: "5ce70fa6d2de686f6f182798c72f59fd9850882073f198a862f4b72e86ad4487.html"},
-                {title: "2 to 5 minutes", link: "62623f49a62e19f0ceda297dd2ad23f541fd329b2633a07930a3c8373882ec50.html"},
-                {title: "5 to 10 minutes", link: "5b84012c164056963b44b6407006803d3542af9a5e48c18e3a6972d01324734f.html"},
-                {title: "10 minutes or over", link: "f6d5bad81c45ca2783ac3c837cad9a94d1394d31e4be192c7b66374203629c91.html"},
+                {title: "Under 1 second", link: "9a2c802fb46d8ec23bdbecffe6fc95d603f52dc2601b2e49adf396f940bb2684.html"},
+                {title: "1 to 10 seconds", link: "ceac565fedbdaf35b101b6d3d99097c5f3a1b4b04c0293bb9d5e78df7c248015.html"},
+                {title: "10 to 30 seconds", link: "1b0c4a40a65307ca395474e4d67e137141ca92708a91fc7b217ef4e50d8d9444.html"},
+                {title: "30 to 60 seconds", link: "ec297e0398b4217da2ed83e4fe18a52c1e5b3d5cd599e19ec15a1729fd2fa5d2.html"},
+                {title: "1 to 2 minutes", link: "59e507723dd7c812557acace019d1ca729b1f8e35d7526c64b37ef84d5fe2a9f.html"},
+                {title: "2 to 5 minutes", link: "9ca0d469a67e46d7287bfb7be3aa7157f2f190318960289a3533ec79a3c0e574.html"},
+                {title: "5 to 10 minutes", link: "c89e343e01ea45c3c865dffa43bd960c058502b8811f4ef568ade966d856eaf0.html"},
+                {title: "10 minutes or over", link: "15804b02a258dc185c3bfb6527fbb86896a33abd9e526112d6a548a1643f2fe1.html"},
         ]
         // The Severity bar chart
         const durationChartCtx = document.getElementById('durationChart');
@@ -635,7 +676,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','0','1','0','0','0','0','0'],
+                data: ['0','0','0','0','0','0','0','1'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
@@ -698,14 +739,14 @@
 
         const coverageReports = [
             {
-                title: 'Search by keyword',
+                title: 'Launch selenium framework web application',
                 result: 'SUCCESS',
-                link: "7340372ade9e992b546bdad4be8cf6f2b2d5ff2a581167d17ccc18c60e3f95b2.html"
+                link: "793c36c7eba42e05e457d04f8dfa38cb51e4017a34a88c97012582b0935db3d4.html"
             },
         ]
         const coverageData = {
             labels: [
-                'Search by keyword',
+                'Launch selenium framework web application',
             ],
             datasets: [
                 {

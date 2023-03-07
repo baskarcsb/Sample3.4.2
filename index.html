@@ -31,9 +31,9 @@
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -73,9 +73,9 @@
 <!-- JQuery-UI -->
 <link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
 <script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -107,9 +107,8 @@
 
     <script class="code" type="text/javascript">$(document).ready(function () {
 
-            $('.scenario-result-table').DataTable({
+            $("#scenario-results").DataTable({
                 "order": [[0, "asc",], [3, "asc",]],
-                "pageLength": 10,
                 "language": {
                     searchPlaceholder: "Filter",
                     search: ""
@@ -117,16 +116,15 @@
                 columnDefs: [
                     {type: 'time-elapsed-dhms', targets: 4}
                 ]
-            });
-
-            $('.manual-scenario-result-table').DataTable({
-                "order": [[0, "asc",], [3, "asc",]],
-                "pageLength": 10,
+            })
+            $("#manual-scenario-results").DataTable({
+                "order": [[0, "asc",], [1, "asc",]],
                 "language": {
                     searchPlaceholder: "Filter",
                     search: ""
                 },
-            });
+            })
+
             // Results table
             $('#test-results-table').DataTable({
                 "order": [[0, "asc",], [3, "asc",]],
@@ -141,12 +139,13 @@
             });
 
             $(".feature-coverage-table").DataTable({
-                searching: false,
+                searching: true,
                 paging: false,
                 info: false
             });
 
             $(".feature-coverage-table-with-pagination").DataTable({
+                searching: true,
                 order: [[0, "asc",]],
                 pageLength: 10,
                 language: {
@@ -198,7 +197,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 25-11-2022 08:12:18</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 07-03-2023 13:13:11</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -213,7 +212,7 @@
                         <td width="375px" valign="top">
                             <div class="test-count-summary">
                                 <div class="test-count-title">
-                                    1 test in 1 scenario
+                                    1 test
 
                                     
 
@@ -294,48 +293,48 @@
                                                                         <td>
                                                                             <i class="bi bi-flag-fill"></i> Tests Started
                                                                         </td>
-                                                                        <td>Nov 25, 2022 08:12:00</td>
+                                                                        <td>Mar 07, 2023 13:02:50</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stop-circle"></i> Tests
                                                                             Finished
                                                                         </td>
-                                                                        <td>Nov 25, 2022 08:12:15</td>
+                                                                        <td>Mar 07, 2023 13:13:07</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Total
                                                                             Duration
                                                                         </td>
-                                                                        <td>14s</td>
+                                                                        <td> 10m 17s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-trophy"></i> Fastest Test
                                                                         </td>
-                                                                        <td>14s</td>
+                                                                        <td> 10m 17s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-skip-start"></i> Slowest
                                                                             Test
                                                                         </td>
-                                                                        <td>14s</td>
+                                                                        <td> 10m 17s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Average
                                                                             Execution Time
                                                                         </td>
-                                                                        <td>14s</td>
+                                                                        <td> 10m 17s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch-fill"></i> Total
                                                                             Execution Time
                                                                         </td>
-                                                                        <td>14s</td>
+                                                                        <td> 10m 17s</td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -366,7 +365,7 @@
                                                                         <tbody>
                                                                             <tr>
                                                                                 <td>
-                                                                                        <a href="7340372ade9e992b546bdad4be8cf6f2b2d5ff2a581167d17ccc18c60e3f95b2.html" > Search by keyword</a>
+                                                                                        <a href="793c36c7eba42e05e457d04f8dfa38cb51e4017a34a88c97012582b0935db3d4.html" > Launch selenium framework web application</a>
                                                                                 </td>
                                                                                 <td>1</td>
                                                                                 <td>1</td>
@@ -394,6 +393,22 @@
 
                                             </div>
                                             <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Tags</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                    <a href="c721517496ffad35fe9a5d73f07a9bd15eb22da3cff8328e1d9f7ec70655c6b0.html">
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Login&nbsp;&nbsp;&nbsp;1
+                                    </span>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
                                             </div>
                                         </div>
                                         <div id="tests" class="tab-pane fade">
@@ -416,12 +431,12 @@
                                                                 <tbody>
                                                                         <tr class="scenario-result SUCCESS">
                                                                             <td>
-                                                                                    <a href="7340372ade9e992b546bdad4be8cf6f2b2d5ff2a581167d17ccc18c60e3f95b2.html">Search by keyword</a>
+                                                                                    <a href="793c36c7eba42e05e457d04f8dfa38cb51e4017a34a88c97012582b0935db3d4.html">Launch selenium framework web application</a>
                                                                             </td>
-                                                                            <td><a href="35cfed838fce6a34547d061ef095dd6837e5024c11ea9a63e7b6112cef6d263f.html">Searching for a term</a></td>
-                                                                            <td>3</td>
-                                                                            <td>08:12:00</td>
-                                                                            <td>14s 846ms</td>
+                                                                            <td><a href="accd79c3bef0ed0ed18648262334bca3e9caaabc4b9ff7f4fa6c7fcd517106ac.html">Launch web application</a></td>
+                                                                            <td>1</td>
+                                                                            <td>13:02:50</td>
+                                                                            <td>10m 17s</td>
                                                                             <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
                                                                             </td>
                                                                         </tr>
@@ -457,7 +472,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <span class="version">Serenity BDD version 3.4.2</span>
+            <span class="version">Serenity BDD version 3.5.1</span>
         </div>
     </div>
 </div>
@@ -664,7 +679,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','0','1','0','0','0','0','0'],
+                data: ['0','0','0','0','0','0','0','1'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
@@ -727,14 +742,14 @@
 
         const coverageReports = [
             {
-                title: 'Search by keyword',
+                title: 'Launch selenium framework web application',
                 result: 'SUCCESS',
-                link: "7340372ade9e992b546bdad4be8cf6f2b2d5ff2a581167d17ccc18c60e3f95b2.html"
+                link: "793c36c7eba42e05e457d04f8dfa38cb51e4017a34a88c97012582b0935db3d4.html"
             },
         ]
         const coverageData = {
             labels: [
-                'Search by keyword',
+                'Launch selenium framework web application',
             ],
             datasets: [
                 {

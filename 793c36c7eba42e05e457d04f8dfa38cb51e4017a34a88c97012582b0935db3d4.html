@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <title>Capabilities</title>
+    <title>Features</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -28,9 +28,9 @@
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -70,9 +70,9 @@
 <!-- JQuery-UI -->
 <link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
 <script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -106,9 +106,8 @@
 
         $(document).ready(function () {
 
-            $('.scenario-result-table').DataTable({
-
-                "order": [],
+            $("#scenario-results").DataTable({
+                "order": [[0, "asc",], [3, "asc",]],
                 "language": {
                     searchPlaceholder: "Filter",
                     search: ""
@@ -116,7 +115,14 @@
                 columnDefs: [
                     {type: 'time-elapsed-dhms', targets: 4}
                 ]
-            });
+            })
+            $("#manual-scenario-results").DataTable({
+                "order": [[0, "asc",], [1, "asc",]],
+                "language": {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                },
+            })
 
             $('.example-table table').DataTable({
                 searching: false,
@@ -147,7 +153,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Search","type":"capability","href":"feba01ff5ef2d3cd0cc0011b0c2554af120fd05d3edae5b73b41093ad1f1ebb9.html","nodes":[{"text":"Search by keyword","type":"feature","href":"7340372ade9e992b546bdad4be8cf6f2b2d5ff2a581167d17ccc18c60e3f95b2.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 scenario\u003c/span\u003e"]}],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 feature\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"Launch selenium framework web application","type":"feature","href":"793c36c7eba42e05e457d04f8dfa38cb51e4017a34a88c97012582b0935db3d4.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 scenario\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -194,9 +200,10 @@
             <span class="breadcrumbs">
             <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
 
+                > <a href="138779bfffb1e6c1d7fe52d5f95f5a23670fef370fcf65c57aa1e4845cb05dff.html">Launchapplication</a>
 
 
-                    > <span class="truncate-40">Search</span>
+                    > <span class="truncate-40">Launch Selenium Framework Web Application</span>
 
             </span>
         </div>
@@ -214,14 +221,14 @@
         <li >
             <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
         </li>
-        <li class="active">
-            <a href="#"><i class="bi bi-chat-text"></i> Capabilities</a>
-        </li>
         <li >
-            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li class="active">
+            <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 25-11-2022 08:12</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 07-03-2023 13:02</span>
     <br style="clear:left"/>
 </div>
 
@@ -238,7 +245,7 @@
 
                                     <div class="col-sm-12">
                                         <span>
-                                            <h2><i class="bi bi-book"></i> Capability: Search</h2>
+                                            <h2><i class="bi bi-book"></i> Feature: Launch Selenium Framework Web Application</h2>
                                         </span>
                                     </div>
                                 </div>
@@ -281,10 +288,90 @@
 
                                             </div>
                                             <div class="col-sm-8">
-                                                <h3>Requirements Overview</h3>
+                                                <!--- TOC --->
+                                                <div id="toc">
+                                                    <h3>Overview</h3>
+                                                    <table class="table" id="toc-table">
+                                                                    <tr>
+                                                                        <td style="width:95%;" class="toc-title">
+                                                                            <span class="orphan-scenario-toc-entry">
+                                                                                    <a href="#bebe6f10f0932515175166a46ca0203cebd2ac80b27197ba2c5a3e2cdc6e8db0"
+                                                                                       title="View scenario details">
+                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Launch web application
+                                                                                    </a>
+                                                                                </span>
+                                                                        </td>
+                                                                        <td>
 
-                                                <div id="tree"></div>
+                                                                        </td>
+                                                                        <td style="width:5%;">
+                                                                            <table>
+                                                                                <tr>
+                                                                                    <td class="icons-bar">
+                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                           href="accd79c3bef0ed0ed18648262334bca3e9caaabc4b9ff7f4fa6c7fcd517106ac.html"
+                                                                                           title="View test results">
+                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                                            </a>
 
+
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="accd79c3bef0ed0ed18648262334bca3e9caaabc4b9ff7f4fa6c7fcd517106ac.html"
+                                                                                               title="View test results">
+                                                                                                <i class="bi bi-eyeglasses"></i>
+                                                                                            </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                    </table>
+                                                </div>
+                                                <!--- END OF TOC --->
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h3>Scenarios</h3>
+
+                                                    <a name="dad9d3ff-5a99-4ae0-9c93-d378cbdb29c5"></a>
+                                                    <p class="rule-tags inline-tag">
+                                                    </p>
+
+
+                                                        <div class="scenario-docs card" id="bebe6f10f0932515175166a46ca0203cebd2ac80b27197ba2c5a3e2cdc6e8db0">
+                                                            <div class="scenario-docs card-header success"
+                                                                 style="min-height:1.5em;">
+                                                                <div>
+                                                                        <span class="scenario-heading">
+                                                                            <a href="accd79c3bef0ed0ed18648262334bca3e9caaabc4b9ff7f4fa6c7fcd517106ac.html"
+                                                                               title="View test results">Scenario: Launch web application</a>
+                                                                        </span>
+
+                                                                        <span class="example-tags inline-tag">
+                                                                                <span class="badge tag-badge"
+                                                                                      style="background:default;">
+                                                                                    <i class="bi bi-tag-fill"></i>&nbsp;
+                                                                                    <a class="tagLink"
+                                                                                       style="background:default;"
+                                                                                       href="c721517496ffad35fe9a5d73f07a9bd15eb22da3cff8328e1d9f7ec70655c6b0.html">login (tag)</a>
+                                                                                </span>
+                                                                        </span>
+
+                                                                    <span class="scenario-result-icon">
+                                                                    
+
+                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                        </span>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="scenario-docs card-body">
+                                                                    <p>Given I launch selenium framework website</p>
+                                                                <div class="examples">
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                             </div>
                                         </div>
                                     </div>
@@ -323,11 +410,10 @@
                                             <div class="col-sm-12">
                                                 <h3><i class="bi bi-gear"></i> Automated Tests</h3>
 
-                                                    <table class="scenario-result-table table"
-                                                           id="scenario-results">
+                                                    <table class="scenario-result-table table" id="scenario-results">
                                                         <thead>
                                                         <tr>
-                                                                <th>feature</th>
+                                                            <th>feature</th>
                                                             <th class="test-name-column">Scenario</th>
                                                             <th>Steps</th>
                                                             <th>Started</th>
@@ -338,13 +424,16 @@
                                                         <tbody>
                                                                 <tr class="scenario-result SUCCESS">
                                                                     <td>
-                                                                            <a href="7340372ade9e992b546bdad4be8cf6f2b2d5ff2a581167d17ccc18c60e3f95b2.html">Search by keyword</a>
+                                                                            <a href="9cbec1391e2af418ffb8a7891dce64681f13567896528aece74ddbb12a906d1b.html">Launch selenium framework web application</a>
                                                                     </td>
-                                                                    <td><a href="35cfed838fce6a34547d061ef095dd6837e5024c11ea9a63e7b6112cef6d263f.html">Searching for a term</a></td>
-                                                                    <td>3</td>
-                                                                    <td>08:12:00</td>
-                                                                    <td>14s 846ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
+                                                                    <td>
+                                                                        <a href="accd79c3bef0ed0ed18648262334bca3e9caaabc4b9ff7f4fa6c7fcd517106ac.html">Launch web application</a>
+                                                                    </td>
+                                                                    <td>1</td>
+                                                                    <td>13:02:50</td>
+                                                                    <td>10m 17s</td>
+                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
+                                                                                style="display:none">SUCCESS</span>
                                                                     </td>
                                                                 </tr>
                                                         </tbody>
@@ -362,6 +451,22 @@
                                             </div>
                                         </div>
 
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Tags</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                    <a href="c721517496ffad35fe9a5d73f07a9bd15eb22da3cff8328e1d9f7ec70655c6b0.html">
+                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Login&nbsp;&nbsp;&nbsp;1
+                                    </span>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
                                     </div>
                                 </div>
                             </div>
@@ -373,7 +478,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
-                    <span class="version">Serenity BDD version 3.4.2</span>
+                    <span class="version">Serenity BDD version 3.5.1</span>
                 </div>
             </div>
         </div>
@@ -388,14 +493,14 @@
 
         // Options define for display value on top of bars
         const outcomeDetailsReports = [
-            { title: 'Passing Test Cases', link: "91d4dc6ccd943e5bb1bd56d50465653792a610f1dacdbee1e9b27b800a0c7727.html" },
-            { title: 'Pending Test Cases', link: "67bbd16ef126c9e2e717fe105701cf13ef391418c7623cede93e7ef19b35f057.html" },
-            { title: 'Ignored Test Cases', link: "1d0ac0ecd34ec815db983ed905d28a554512464f8e766f6c5e92c8a8dff859e6.html" },
-            { title: 'Skipped Test Cases', link: "04120cfc0d64376da72183b6657fc9d2e9b481cd95086fe733bec1e43e5ac20f.html" },
-            { title: 'Aborted Test Cases',  link: "317da93c83db78eb6942e4ce0c8dd61112b99986578348560af86dd57de34706.html"},
-            { title: 'Failed Test Cases', link: "3d3c26a52fe72a2447ab0cbc74a2db63bacc12b668e0c340a05b4c81d72b0fc7.html"  },
-            { title: 'Broken Test Cases', link: "99b8b9d6f06dbe6060535707fb42ef5af55615cf9c23b0017d657e65c0b21425.html"    },
-            { title: 'Compromised Test Cases',  link: "88fa28391e12c50d1853a9e3cea38838a33315b5f24a89935a48b870fcca5d48.html" },
+            { title: 'Passing Test Cases', link: "5cccd020bc35fc25299654991954c27930b77f2c745174f03739b7aa2f58442f.html" },
+            { title: 'Pending Test Cases', link: "c814d01baaccdd3797c122548b3157f20de09be879603ca8ce1c797bbb4568e4.html" },
+            { title: 'Ignored Test Cases', link: "61780b83c9a5ce8a6d9f634920a7f1cd9676885b4f6e6b579c0292c78ef1ed9a.html" },
+            { title: 'Skipped Test Cases', link: "3732274fcf579685681a6f17379984b9f893bab68ce0b43fadacbc3405b3bf32.html" },
+            { title: 'Aborted Test Cases',  link: "fadcb80728b0dabe47f7cab02a6e1547431f2abe446f350b2895605b3786c3e7.html"},
+            { title: 'Failed Test Cases', link: "2348926a1b522eadccc61f8b4268b0cae2b545c377cfb741fae8ecccc6cc4236.html"  },
+            { title: 'Broken Test Cases', link: "70af37d877719bfcc2e5c7ce8a36fa21bf110dde72b97623cc683b1cf93fb2bc.html"    },
+            { title: 'Compromised Test Cases',  link: "b132017add48e0f3b085df286e1291ef9564c65c56381b5c58bd0242a778708f.html" },
         ]
         const outcomeData = {
             labels: ['Passing Test Cases', 'Pending Test Cases', 'Ignored Test Cases', 'Skipped Test Cases', 'Aborted Test Cases', 'Failed Test Cases', 'Broken Test Cases', 'Compromised Test Cases','Undefined Test Cases'],
@@ -482,14 +587,14 @@
 
         // Options define for display value on top of bars
         const requirementsOutcomeDetailsReports = [
-            { title: 'Passing Test Cases', link: "91d4dc6ccd943e5bb1bd56d50465653792a610f1dacdbee1e9b27b800a0c7727.html" },
-            { title: 'Pending Test Cases', link: "67bbd16ef126c9e2e717fe105701cf13ef391418c7623cede93e7ef19b35f057.html" },
-            { title: 'Ignored Test Cases', link: "1d0ac0ecd34ec815db983ed905d28a554512464f8e766f6c5e92c8a8dff859e6.html" },
-            { title: 'Skipped Test Cases', link: "04120cfc0d64376da72183b6657fc9d2e9b481cd95086fe733bec1e43e5ac20f.html" },
-            { title: 'Aborted Test Cases',  link: "317da93c83db78eb6942e4ce0c8dd61112b99986578348560af86dd57de34706.html"},
-            { title: 'Failed Test Cases', link: "3d3c26a52fe72a2447ab0cbc74a2db63bacc12b668e0c340a05b4c81d72b0fc7.html"  },
-            { title: 'Broken Test Cases', link: "99b8b9d6f06dbe6060535707fb42ef5af55615cf9c23b0017d657e65c0b21425.html"    },
-            { title: 'Compromised Test Cases',  link: "88fa28391e12c50d1853a9e3cea38838a33315b5f24a89935a48b870fcca5d48.html" },
+            { title: 'Passing Test Cases', link: "5cccd020bc35fc25299654991954c27930b77f2c745174f03739b7aa2f58442f.html" },
+            { title: 'Pending Test Cases', link: "c814d01baaccdd3797c122548b3157f20de09be879603ca8ce1c797bbb4568e4.html" },
+            { title: 'Ignored Test Cases', link: "61780b83c9a5ce8a6d9f634920a7f1cd9676885b4f6e6b579c0292c78ef1ed9a.html" },
+            { title: 'Skipped Test Cases', link: "3732274fcf579685681a6f17379984b9f893bab68ce0b43fadacbc3405b3bf32.html" },
+            { title: 'Aborted Test Cases',  link: "fadcb80728b0dabe47f7cab02a6e1547431f2abe446f350b2895605b3786c3e7.html"},
+            { title: 'Failed Test Cases', link: "2348926a1b522eadccc61f8b4268b0cae2b545c377cfb741fae8ecccc6cc4236.html"  },
+            { title: 'Broken Test Cases', link: "70af37d877719bfcc2e5c7ce8a36fa21bf110dde72b97623cc683b1cf93fb2bc.html"    },
+            { title: 'Compromised Test Cases',  link: "b132017add48e0f3b085df286e1291ef9564c65c56381b5c58bd0242a778708f.html" },
             { title: 'Undefined Test Cases',  link: "" },
         ]
         const requirementsOutcomeData = {
@@ -579,14 +684,14 @@
         // Options define for display value on top of bars
 
         const severityDetailsReports = [
-            { title: 'Passing Scenarios', link: "91d4dc6ccd943e5bb1bd56d50465653792a610f1dacdbee1e9b27b800a0c7727.html" },
-            { title: 'Pending Scenarios', link: "67bbd16ef126c9e2e717fe105701cf13ef391418c7623cede93e7ef19b35f057.html" },
-            { title: 'Ignored Scenarios', link: "1d0ac0ecd34ec815db983ed905d28a554512464f8e766f6c5e92c8a8dff859e6.html" },
-            { title: 'Skipped Scenarios', link: "04120cfc0d64376da72183b6657fc9d2e9b481cd95086fe733bec1e43e5ac20f.html" },
-            { title: 'Aborted Scenarios',  link: "317da93c83db78eb6942e4ce0c8dd61112b99986578348560af86dd57de34706.html"},
-            { title: 'Failed Scenarios', link: "3d3c26a52fe72a2447ab0cbc74a2db63bacc12b668e0c340a05b4c81d72b0fc7.html"  },
-            { title: 'Broken Scenarios', link: "99b8b9d6f06dbe6060535707fb42ef5af55615cf9c23b0017d657e65c0b21425.html"    },
-            { title: 'Compromised Scenarios',  link: "88fa28391e12c50d1853a9e3cea38838a33315b5f24a89935a48b870fcca5d48.html" },
+            { title: 'Passing Scenarios', link: "5cccd020bc35fc25299654991954c27930b77f2c745174f03739b7aa2f58442f.html" },
+            { title: 'Pending Scenarios', link: "c814d01baaccdd3797c122548b3157f20de09be879603ca8ce1c797bbb4568e4.html" },
+            { title: 'Ignored Scenarios', link: "61780b83c9a5ce8a6d9f634920a7f1cd9676885b4f6e6b579c0292c78ef1ed9a.html" },
+            { title: 'Skipped Scenarios', link: "3732274fcf579685681a6f17379984b9f893bab68ce0b43fadacbc3405b3bf32.html" },
+            { title: 'Aborted Scenarios',  link: "fadcb80728b0dabe47f7cab02a6e1547431f2abe446f350b2895605b3786c3e7.html"},
+            { title: 'Failed Scenarios', link: "2348926a1b522eadccc61f8b4268b0cae2b545c377cfb741fae8ecccc6cc4236.html"  },
+            { title: 'Broken Scenarios', link: "70af37d877719bfcc2e5c7ce8a36fa21bf110dde72b97623cc683b1cf93fb2bc.html"    },
+            { title: 'Compromised Scenarios',  link: "b132017add48e0f3b085df286e1291ef9564c65c56381b5c58bd0242a778708f.html" },
         ]
         const severityData = {
             labels: ['Passing', 'Pending', 'Ignored', 'Skipped', 'Aborted', 'Failed', 'Broken', 'Compromised'],
@@ -657,14 +762,14 @@
 
         // Options define for display value on top of bars
         const durationDetailsReports = [
-                {title: "Under 1 second", link: "a862c5a9369030d3804668211d7f2f562cbc5964129c469650c7f84e80c1d47d.html"},
-                {title: "1 to 10 seconds", link: "bbdab4673d076c3228487d94b2e28a1e849712e7b6722683fa851b491e1296aa.html"},
-                {title: "10 to 30 seconds", link: "4e6aa3212c76a13f1faf1367a607e34db6582dd1e9145f55cd1f413a585b962e.html"},
-                {title: "30 to 60 seconds", link: "b2a0095eb370b14c444f56d53321979e4ac9c2a1b049cb6c27856f99c69ba630.html"},
-                {title: "1 to 2 minutes", link: "e7e8b1e28985bff01f7e926691134c73a47680d1293d70bb8608470149ce5544.html"},
-                {title: "2 to 5 minutes", link: "64706ef657f4fed2306e30104ac5ae41dddb7d692ce2ea6b0adcecf1ab19f12c.html"},
-                {title: "5 to 10 minutes", link: "39cd07f1d19163067cd6eebc2627896e6437153499e5249703ae8045550f0d11.html"},
-                {title: "10 minutes or over", link: "0c62711b5c4c96de060a357bc2520d2c3fedd966d9ce90e1ccad830cbb72e449.html"},
+                {title: "Under 1 second", link: "9a2c802fb46d8ec23bdbecffe6fc95d603f52dc2601b2e49adf396f940bb2684.html"},
+                {title: "1 to 10 seconds", link: "ceac565fedbdaf35b101b6d3d99097c5f3a1b4b04c0293bb9d5e78df7c248015.html"},
+                {title: "10 to 30 seconds", link: "1b0c4a40a65307ca395474e4d67e137141ca92708a91fc7b217ef4e50d8d9444.html"},
+                {title: "30 to 60 seconds", link: "ec297e0398b4217da2ed83e4fe18a52c1e5b3d5cd599e19ec15a1729fd2fa5d2.html"},
+                {title: "1 to 2 minutes", link: "59e507723dd7c812557acace019d1ca729b1f8e35d7526c64b37ef84d5fe2a9f.html"},
+                {title: "2 to 5 minutes", link: "9ca0d469a67e46d7287bfb7be3aa7157f2f190318960289a3533ec79a3c0e574.html"},
+                {title: "5 to 10 minutes", link: "c89e343e01ea45c3c865dffa43bd960c058502b8811f4ef568ade966d856eaf0.html"},
+                {title: "10 minutes or over", link: "15804b02a258dc185c3bfb6527fbb86896a33abd9e526112d6a548a1643f2fe1.html"},
         ]
         // The Severity bar chart
         const durationChartCtx = document.getElementById('durationChart');
@@ -676,7 +781,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','0','1','0','0','0','0','0'],
+                data: ['0','0','0','0','0','0','0','1'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
