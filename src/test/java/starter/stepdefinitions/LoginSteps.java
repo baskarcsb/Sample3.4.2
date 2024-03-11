@@ -1,16 +1,21 @@
 package starter.stepdefinitions;
 
-import io.cucumber.java.en.Given;
-import net.serenitybdd.starter.helper.LoginHelper;
-import net.thucydides.core.annotations.Steps;
+import net.serenitybdd.annotations.Steps;
 
-public class LoginSteps {
+import com.gehc.cb.bdd.helpers.LoginHelper;
+import io.cucumber.java.en.Given;
+
+public class LoginSteps { 
 	
+	public String eDriverExe = "src/test/resources/drivers/chromedriver.exe";
+	public String eDriver = "webdriver.chrome.driver";
+	  
 	@Steps
 	LoginHelper loginHelper;
 
     @Given("^I launch selenium framework website$")
     public void launchSeleniumWebsite() throws Exception {
+    	System.setProperty(eDriver, eDriverExe); 
     	loginHelper.openLoginPage();
     }
 }
