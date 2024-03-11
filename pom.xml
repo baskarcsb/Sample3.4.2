@@ -169,20 +169,6 @@
 			<version>${commons-net.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.idx.hco</groupId>
-			<artifactId>HCObjects</artifactId>
-			<version>${HCObjects.version}</version>
-			<scope>system</scope>
-			<systemPath>///${project.basedir}/src/test/resources/jars/HCObjects.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.intersystems</groupId>
-			<artifactId>cachejdbc</artifactId>
-			<version>${cachejdbc.verison}</version>
-			<scope>system</scope>
-			<systemPath>///${project.basedir}/src/test/resources/jars/intersystems-jdbc-3.3.0.jar</systemPath>
-		</dependency>
-		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-csv</artifactId>
 			<version>${commons-csv.version}</version>
